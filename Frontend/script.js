@@ -7,7 +7,7 @@ formcriar.addEventListener("submit", async (e) => {
     const usuario = document.getElementById('usuario').value;
     const senha = document.getElementById('senha').value;
 
-    const resposta = await fetch("http://127.0.0.1:3000/criar", {
+    const resposta = await fetch("https://central-de-links.vercel.app/criar.html", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome_exibicao, usuario, senha })
@@ -15,4 +15,5 @@ formcriar.addEventListener("submit", async (e) => {
 
     const data = await resposta.json();
     alert(data.msg);
+
 });
