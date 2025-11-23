@@ -4,7 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const app = express();
 
-app.use(cors({ origin: 'https://central-de-links.vercel.app/criar.html' }));
+app.use(cors({ origin: 'https://central-de-links.vercel.app' }));
 app.use(express.json())
 
 
@@ -40,4 +40,5 @@ app.post("/criar", (req, res) => {
 app.listen(3000, () => {
     console.log("Servidor rodando na porta 3000");
 });
+
 
