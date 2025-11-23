@@ -12,9 +12,14 @@ formcriar.addEventListener("submit", async (e) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome_exibicao, usuario, senha })
     });
+    try {
+        const data = await resposta.json();
+        console.log(data);
+    } catch (err) {
+        console.error("Não veio JSON válido", err);
+}
 
-    const data = await resposta.json();
-    alert(data.msg);
 
 });
+
 
